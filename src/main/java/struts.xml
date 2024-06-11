@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="basicstruts2" extends="struts-default">
+		<action name="login" class="com.action.LoginAction">
+			<result name="success">MainPage.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		<action name="signup" class="com.action.SignupAction">
+			<result name="success">MainPage.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		<action name="addregister" class="com.action.RegisterAction">
+			<result name="success">DailyRegister.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		<action name="regupdateindetails" class="com.action.RegisterAction" method="executeMethodOne">
+			<result name="success">DailyRegister.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		
+		<action name="addguest" class="com.action.GuestAction">
+			<result name="success">Guest.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		<action name="updateguestout" class="com.action.GuestAction"  method="executeMethodOne">
+			<result name="success">Guest.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		
+		<action name="addtenant" class="com.action.TenantAction">
+			<result name="success">MainPage.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		<action name="vacatetenant" class="com.action.TenantAction"  method="executeMethodOne">
+			<result name="success">MainPage.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		
+		<action name="tenantsearch" class="com.action.TenantAction"  method="executeMethodTwo">
+			<result name="success">MainPage.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		<action name="updatetenant" class="com.action.TenantAction"  method="executeMethodThree">
+			<result name="success">MainPage.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		
+		
+		
+	</package>
+</struts>
