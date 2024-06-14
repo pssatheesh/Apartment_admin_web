@@ -44,12 +44,22 @@
 			<result name="success">MainPage.jsp</result>
 			<result name="error">ErrorPage.jsp</result>
 		</action>
+		<action name="tenantupdate">
+			<result name="success">UpdateTenant.jsp</result>
+		</action>
 		<action name="updatetenant" class="com.action.TenantAction"  method="executeMethodThree">
-			<result name="success">MainPage.jsp</result>
+			<result name="success" >MainPage.jsp</result>
 			<result name="error">ErrorPage.jsp</result>
 		</action>
 		
-		
+		<action name="addworker" class="com.action.WorkerAction">
+			<result name="success">ViewWorkers.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
+		<action name="updateWorker" class="com.action.WorkerAction" method="executeMethodOne">
+			<result name="success">ViewWorkers.jsp</result>
+			<result name="error">ErrorPage.jsp</result>
+		</action>
 		
 	</package>
 </struts>

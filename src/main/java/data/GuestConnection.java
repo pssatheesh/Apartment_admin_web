@@ -73,38 +73,31 @@ public class GuestConnection {
 
 	public int updateGuestOut(String vehicle, Date date, String formatTime) {
 		int n = 0;
-		try 
-		{
+		try {
 			String q = "update GuestDetails set Outdate=?, Outtime=? where Vehicle_details=?";
 			updateParkingSlot(vehicle);
 			connection = DbCode.getConnection();
 			pst = connection.prepareStatement(q);
-			pst.setDate(1,date);
-			pst.setString(2,formatTime);
-			pst.setString(3,vehicle);
+			pst.setDate(1, date);
+			pst.setString(2, formatTime);
+			pst.setString(3, vehicle);
 			n = pst.executeUpdate();
-		} 
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 			Utility.showAlert("Error: " + e);
 		}
 		return n;
 	}
 
-	private void updateParkingSlot(String vehicle) throws ClassNotFoundException, SQLException 
-	{
+	private void updateParkingSlot(String vehicle) throws ClassNotFoundException, SQLException {
 		String parkingSlot = getParkingSlot(vehicle);
-		System.out.println( " Parking slot : "+ parkingSlot);
+		System.out.println(" Parking slot : " + parkingSlot);
 		String query = "update parkingGuest set available=? where Parking_slot=?";
 		connection = DbCode.getConnection();
-		try(PreparedStatement pr = connection.prepareStatement(query))
-		{
+		try (PreparedStatement pr = connection.prepareStatement(query)) {
 			pr.setInt(1, 1);
-			pr.setString(2,parkingSlot);
+			pr.setString(2, parkingSlot);
 			System.out.println(pr.executeUpdate());
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -113,20 +106,16 @@ public class GuestConnection {
 		String query = "select Parking_slot from GuestDetails where Vehicle_details =? ";
 		connection = DbCode.getConnection();
 		String parkingSlot = null;
-	    try(PreparedStatement pr = connection.prepareStatement(query))
-	    {
-	    	pr.setString(1, vehicle); 
-	    	ResultSet rs = pr.executeQuery();
-	    	while(rs.next())
-	    	{
-	    		parkingSlot =rs.getString(1);
-	    	}
-	    }
-	    catch(Exception e)
-	    {
-	    	e.printStackTrace();
-	    }
-	    return parkingSlot;
+		try (PreparedStatement pr = connection.prepareStatement(query)) {
+			pr.setString(1, vehicle);
+			ResultSet rs = pr.executeQuery();
+			while (rs.next()) {
+				parkingSlot = rs.getString(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return parkingSlot;
 	}
 
 	private Guest gcreateObject() throws Exception {
@@ -147,17 +136,13 @@ public class GuestConnection {
 	public String getAllowcate() throws ClassNotFoundException, SQLException {
 		String query = "select * from parkingGuest where available=?";
 		connection = DbCode.getConnection();
-		try(PreparedStatement pr = connection.prepareStatement(query))
-		{
+		try (PreparedStatement pr = connection.prepareStatement(query)) {
 			pr.setInt(1, 1);
 			ResultSet rs = pr.executeQuery();
-			while(rs.next())
-			{
-			   return rs.getString(2);
+			while (rs.next()) {
+				return rs.getString(2);
 			}
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;

@@ -48,16 +48,13 @@
                                         <label for="floatingPassword">Password</label>
                                     </div>
                                     <div class="form-check mb-3 d-flex justify-content-between">
-                                        <div>
-                                            <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
-                                            <label class="form-check-label" for="rememberPasswordCheck">Remember password</label>
-                                        </div>
-                                        <a class="small" href="#">Forgot password?</a>
+                                        
+                                        <!-- <a class="medium" href="#">Forgot password?</a> -->
                                     </div>
                                     <div class="d-grid">
                                         <input class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">
                                         <div class="text-center">
-                                            <a class="small" href="Signup.jsp">I don't have an account?</a>
+                                            <a class="medium" href="Signup.jsp">I don't have an account?</a>
                                         </div>
                                     </div>
                                 </form>

@@ -51,59 +51,29 @@ a {
 </head>
 <body>
 	<div class="container-fluid d-flex flex-column h-100">
-		<h1 class="header bg-light p-3 text-center text-uppercase">Title</h1>
+		<jsp:include page="Jsp Pages/header.jsp" />
 		<div class="row flex-grow-1">
-			<div class="leftside col-12 col-md-2 d-flex flex-column bg-dark p-3">
-				<a href="#" class="d-flex align-items-center mb-3"> <svg
-						xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-						fill="currentColor" class="bi bi-arrow-left-square-fill"
-						viewBox="0 0 16 16">
-                        <path
-							d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1" />
-                    </svg> <span class="ms-2">Back</span>
-				</a>
-				<div class="py-1 d-flex align-items-center">
-					<a href="MainPage.jsp"><svg xmlns="http://www.w3.org/2000/svg"
-							width="16" height="16" fill="currentColor" class="bi bi-house"
-							viewBox="0 0 16 16">
-                        <path
-								d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                    </svg> <span class="ms-2">Home</span></a>
-				</div>
-				<div class="py-1 d-flex align-items-center">
-					<a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16"
-							height="16" fill="currentColor" class="bi bi-person-heart"
-							viewBox="0 0 16 16">
-                        <path
-								d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
-                    </svg> <span class="ms-2">Profile</span></a>
-				</div>
-
-				<div class="py-1 d-flex align-items-center">
-					<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-							height="16" fill="currentColor" class="bi bi-star"
-							viewBox="0 0 16 16">
-                        <path
-								d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
-                      </svg> <span class="ms-2">About</span></a>
-				</div>
-				<div class="py-1 d-flex align-items-center">
-					<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-							height="16" fill="currentColor" class="bi bi-star"
-							viewBox="0 0 16 16">
-                        <path
-								d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
-                      </svg> <span class="ms-2">Logout</span></a>
-				</div>
-			</div>
-			<div class="main col-12 col-md-10 d-flex flex-column bg-light p-3">
+			
+			<div class="main col-12 d-flex flex-column bg-light p-3">
 
 				<div class="col-12 d-flex">
 					<input type="text" id="searchInput" class="form-control w-25 mr-2"
 						placeholder="Enter the name">
 					<button class="btn btn-primary" onclick="searchTenant()">Search</button>
 				</div>
-
+				
+				<!--Code for details to update  -->
+					<form id="updateForm" action="tenantupdate" method="post"
+						style="display: none;">
+						<input type="hidden" name="regno" id="regno">
+						<input type="hidden" name="block" id="block">
+						<input type="hidden" name="flat" id="flat">
+						<input type="hidden" name="vehicle" id="vehicle">
+						<input type="hidden" name="mobile" id="mobile">
+						<input type="hidden" name="parking" id="parking">
+					</form>
+					<!--  -->
+				
 				<div class="container custom-container rounded-5 mt-5 shadow-lg p-5">
 				<div class="header text-center mt-1">
 					<h4 class="fw-medium">Tenant Details</h4>
@@ -120,14 +90,15 @@ a {
 									<th>Address</th>
 									<th>Vehicle Details</th>
 									<th>Mobile No</th>
-									<th>Id Proof</th>
-									<th>Id Proof No</th>
+									<!-- <th>Id Proof</th>
+									<th>Id Proof No</th> -->
 									<th>In Date</th>
 									<th>In Time</th>
 									<th>Out Date</th>
 									<th>Out Time</th>
 									<th>Parking Slot</th>
-									<th>Status</th>
+									<!-- <th>Status</th> -->
+									<td>Process</td>
 								</tr>
 							</thead>
 							<tbody>
@@ -142,14 +113,18 @@ a {
 									<td><%=i.getAddress()%></td>
 									<td><%=i.getVehicleDetails()%></td>
 									<td><%=i.getMobile()%></td>
-									<td><%=i.getGovIdProof()%></td>
-									<td><%=i.getGovId()%></td>
+									<%-- <td><%=i.getGovIdProof()%></td>
+									<td><%=i.getGovId()%></td> --%>
 									<td><%=i.getInDate()%></td>
 									<td><%=i.getInTime()%></td>
 									<td><%=i.getOutDate()%></td>
 									<td><%=i.getOutTime()%></td>
 									<td><%=i.getParkingSlot()%></td>
-									<td><%=i.isStatus()%></td>
+									<%-- <td><%=i.isStatus()%></td> --%>
+									<td>
+										<button class="btn btn-primary mx-2"
+											onclick="submitForm('<%=i.getRegisterNo()%>', '<%=i.getBlock()%>', '<%=i.getFlatNo()%>', '<%=i.getVehicleDetails()%>', '<%=i.getMobile()%>', '<%=i.getParkingSlot()%>')">Update</button>
+									</td>
 								</tr>
 								<%
 								}
@@ -174,6 +149,14 @@ a {
 <script>
 	function gotopage() {
 		window.location.href = 'MainPage.jsp';
+	}
+	function submitForm(regNo, name, vehicle, mobile, parking) {
+	    document.getElementById('regno').value = regNo;
+	    document.getElementById('name').value = name;
+	    document.getElementById('vehicle').value = vehicle;
+	    document.getElementById('mobile').value = mobile;
+	    document.getElementById('parking').value = parking;
+	    document.getElementById('updateForm').submit();
 	}
 
 	function searchTenant() {

@@ -9,13 +9,12 @@
     <style>
         .main
         {
-            border: 1px solid black;
             height: auto;
         }
         .container{
             height: auto;
         }
-        #banner{
+        #banner1{
             height:1000px;
         }
         img 
@@ -79,17 +78,42 @@
     </style>
     </head>
     <body>
+    
         <div class="container-fluid d-flex flex-column">
-            <h1 class="header bg-light p-3 text-center text-uppercase"> SS Apartment</h1>
-            <div class=" d-flex align-items-center justify-content-end"> 
-                <div class=" col-md-2 my-2">
-                    <button class="btn btn-success" onclick="gotoSignin()">Sign in</button>
-                    <button class="btn btn-success" onclick="gotoSignup()">Sign Up</button>
-                </div> 
-            </div>
+            <jsp:include page="Jsp Pages/header.jsp" />
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- Logo on the left side -->
+        <a class="navbar-brand" href="#">Logo</a>
+
+        <!-- Centered navigation links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="main.jsp"><button class="btn btn-outline-info">Home</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="btn btn-outline-info">Support</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="btn btn-outline-info">About Us</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="btn btn-outline-info">Contact</button></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Buttons on the right side -->
+        <div class="d-flex align-items-center">
+            <button class="btn btn-success mx-1" onclick="gotoSignin()">Sign in</button>
+            <button class="btn btn-success mx-1" onclick="gotoSignup()">Sign Up</button>
+        </div>
+    </div>
+</nav>
             <div class="row">
                 <div class="main col-12 col-md-12 bg-light p-3 border-radius-15px">
-                    <div class="image  col-md-12"><img id="banner" src="https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg" ></div>
+                    <div class="image  col-md-12"><img id="banner1" src="https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg" ></div>
                     <div class="rooms">
                         <div class="con"> 
                              <h2>Luxury Bedding and Furnishings</h2>

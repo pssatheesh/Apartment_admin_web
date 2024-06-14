@@ -6,25 +6,9 @@
 <meta charset="ISO-8859-1">
 <title>Add Tenant</title>
 <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .gradient-custom-3 {
-background: #84fab0;
-
-background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-
-
-background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
-}
-.gradient-custom-4 {
-
-background: #84fab0;
-
-background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
-
-background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
-}
-    </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="Css\backpage.css" rel="stylesheet">
+    
 </head>
 <body>
     <section class="vh-120 bg-image"
@@ -70,7 +54,7 @@ background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244
                   <span></span>
                 </div> 
                 <div data-mdb-input-init class="form-outline mb-4">
-                    <label class="form-label" for="idproof">"Id proof Number"</label>
+                    <label class="form-label" for="idproof">Id proof Number</label>
                   <input type="text" id="idproofno" name="idproofno" class="form-control form-control-lg" required autofocus/>
                   <span></span>
                 </div> 
