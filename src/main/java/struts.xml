@@ -7,7 +7,7 @@
 	<package name="basicstruts2" extends="struts-default">
 		<action name="login" class="com.action.LoginAction">
 			<result name="success">MainPage.jsp</result>
-			<result name="error">ErrorPage.jsp</result>
+			<result name="error">ErrorPage.jsp</result> 
 		</action>
 		<action name="signup" class="com.action.SignupAction">
 			<result name="success">MainPage.jsp</result>
@@ -61,5 +61,8 @@
 			<result name="error">ErrorPage.jsp</result>
 		</action>
 		
+		<action name="logout" class="com.action.LoginAction" method="logout">
+			<result name="success">main.jsp</result>
+		</action>
 	</package>
 </struts>

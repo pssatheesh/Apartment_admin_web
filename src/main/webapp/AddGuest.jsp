@@ -13,6 +13,11 @@
 	<link href="Css\backpage.css" rel="stylesheet">
 
 </head>
+<%
+if(session.getAttribute("user")==null){
+	response.sendRedirect("Loginpage.jsp");
+}
+%>
 <body>
 	<section class="vh-120 bg-image"
 		style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">

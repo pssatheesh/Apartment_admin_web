@@ -5,6 +5,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Vacate Tenant</title>
+<%
+if(session.getAttribute("user")==null){
+	response.sendRedirect("Loginpage.jsp");
+}
+%>
 <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>

@@ -10,7 +10,12 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
-
+<%
+response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+if(session.getAttribute("user")==null){
+	response.sendRedirect("Loginpage.jsp");
+}
+%>
 <style>
 .main {
 	border: 1px solid black;

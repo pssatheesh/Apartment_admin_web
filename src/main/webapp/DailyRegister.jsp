@@ -8,6 +8,9 @@
 <jsp:useBean id="obj" class="com.action.RegisterAction"></jsp:useBean>
 <%
 List<Register> reg = obj.viewRegistry();
+if(session.getAttribute("user")==null){
+	response.sendRedirect("Loginpage.jsp");
+}
 %>
 <head>
 <meta charset="ISO-8859-1">

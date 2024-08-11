@@ -8,10 +8,13 @@
 <jsp:useBean id="obj" class="com.action.GuestAction"></jsp:useBean>
 <%
 List<Guest> guestdetails = obj.viewAllGuest();
+if(session.getAttribute("user")==null){
+	response.sendRedirect("Loginpage.jsp");
+}
 %>
 <head>
 <meta charset="ISO-8859-1">
-<title>Guset View</title>
+<title>Guest View</title>
 <link href="https://cdn.lineicons.com/4.0/lineicons.css"
 	rel="stylesheet" />
 <link

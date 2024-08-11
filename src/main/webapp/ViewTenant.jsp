@@ -8,6 +8,9 @@
 <jsp:useBean id="obj" class="com.action.TenantAction"></jsp:useBean>
 <%
 List<Tenant> tenantdetails = obj.viewAllTenant();
+if(session.getAttribute("user")==null){
+	response.sendRedirect("Loginpage.jsp");
+}
 %>
 <head>
 <meta charset="ISO-8859-1">
